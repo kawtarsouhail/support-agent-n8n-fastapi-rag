@@ -1,12 +1,15 @@
 # ingest.py
-import os, re, psycopg
-from sentence_transformers import SentenceTransformer
+import os
+
+import psycopg
 from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
 
 load_dotenv()
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 # faq.md au format :  ## question\n réponse...
-texte = open("faq.md", encoding="utf-8").read()
+with open("faq.md", encoding="utf-8") as f:
+    texte = f.read()
 blocs = [b.strip() for b in texte.split("## ") if b.strip()]
 
 with psycopg.connect(os.environ["DATABASE_URL"]) as conn:
