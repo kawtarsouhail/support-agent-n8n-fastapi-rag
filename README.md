@@ -5,8 +5,6 @@ de connaissances (RAG), décide de répondre automatiquement ou d'escalader
 vers un humain — avec validation et alertes en temps réel.
 
 ## Architecture
-## Architecture
-
 ![Architecture du workflow n8n](docs/workflow1.png)
 ![Architecture du workflow n8n](docs/workflow2.png)
 ![Architecture du workflow n8n](docs/workflow3.png)
