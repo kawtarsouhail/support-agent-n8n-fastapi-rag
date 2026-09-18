@@ -15,8 +15,11 @@ vers un humain — avec validation et alertes en temps réel.
 - Telegram Bot API (escalade et validation humaine)
 
 ## Résultats
-[tes vrais chiffres, tirés de `SELECT action, count(*) FROM tickets GROUP BY action`]
-Exemple : "X tickets traités, Y% résolus automatiquement, escalade humaine pour le reste"
+| action            | count |
+| ----------------- | ----- |
+| escalade_urgence  | 1     |
+| escalade_hors_faq | 2     |
+| reponse_directe   | 3     |
 
 ## Installation
 1. `cd python && pip install -r requirements.txt`
@@ -29,4 +32,3 @@ Exemple : "X tickets traités, Y% résolus automatiquement, escalade humaine pou
 ## Limites connues
 - FAQ volontairement réduite (~20 entrées) pour rester démonstratif
 - Pas d'authentification utilisateur (usage interne)
-- [autre limite honnête que tu identifies]
