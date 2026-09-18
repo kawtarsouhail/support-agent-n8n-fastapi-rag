@@ -4,10 +4,26 @@ Agent IA qui classe les messages clients, cherche une réponse dans une base
 de connaissances (RAG), décide de répondre automatiquement ou d'escalader
 vers un humain — avec validation et alertes en temps réel.
 
-## Architecture
-![Architecture du workflow n8n](docs/workflow1.png)
-![Architecture du workflow n8n](docs/workflow2.png)
-![Architecture du workflow n8n](docs/workflow3.png)
+### Workflow Scenarios
+
+#### 1. Réponse automatique depuis la FAQ
+
+Lorsque la question du client concerne un sujet couvert par notre FAQ, n8n récupère les informations pertinentes et génère directement une réponse au client.
+
+![Workflow — Réponse automatique depuis la FAQ](docs/workflow1.png)
+
+#### 2. Escalade vers le support humain
+
+Lorsque le message du client est identifié comme urgent, n8n déclenche une escalade directe vers le support humain afin qu'un membre de l'équipe puisse prendre en charge la demande.
+
+![Workflow — Escalade vers le support humain](docs/workflow2.png)
+
+#### 3. Question hors sujet
+
+Lorsque la question du client n'a aucun rapport avec l'activité de l'entreprise, le système l'identifie comme une demande hors sujet et applique le traitement prévu pour ce type de message.
+
+![Workflow — Question hors sujet](docs/workflow3.png)
+
 
 ## Stack
 - n8n (orchestration)
