@@ -1,9 +1,11 @@
 # main.py
-import os, psycopg
+import os
+
+import psycopg
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
-from dotenv import load_dotenv
 
 load_dotenv()
 app = FastAPI(title="RAG FAQ")
